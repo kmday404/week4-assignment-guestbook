@@ -31,3 +31,31 @@ app.get("/reviews", async (req, res) => {
 });
 
 //a route to CREATE new data to the database (post?)
+app.post("/reviews", async (req, res) => {
+  const {
+    guest_name,
+    check_in_date,
+    check_out_date,
+    travelled_from,
+    message_to_host,
+    favourite_moments,
+    recommendations,
+    rating,
+  } = req.body;
+  const query = await db.query(
+    `INSERT INTO reviews(guest_name, check_in_date, check_out_date, travelled_from, message_to_host, favourite_moments, recommendations, rating) VALUES ('${1}', '${2}', '${3}', '${4}', '${5}', '${6}', '${7}', '${8}')`[
+      (guest_name,
+      check_in_date,
+      check_out_date,
+      travelled_from,
+      message_to_host,
+      favourite_moments,
+      recommendations,
+      rating)
+    ]
+  );
+
+  //we can wrangle the query response to get the rows property only.
+  res.json(query.rows);
+  console.log(query);
+});
