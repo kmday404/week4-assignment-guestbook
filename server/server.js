@@ -22,12 +22,12 @@ app.get("/", (req, res) => {
   res.json({ message: "This is the root route!" });
 });
 
-//I need an endpoint to READ the data in my pets table
-//We can use SQL to query our database and get the data
-//Our database is not hosted locally, so we don't know how long the data takes to travel
+//a route to READ the database data (get?)
 app.get("/reviews", async (req, res) => {
   const query = await db.query(`SELECT * FROM reviews`);
   //we can wrangle the query response to get the rows property only.
   res.json(query.rows);
   console.log(query);
 });
+
+//a route to CREATE new data to the database (post?)
