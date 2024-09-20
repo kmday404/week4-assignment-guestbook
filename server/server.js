@@ -25,9 +25,9 @@ app.get("/", (req, res) => {
 //I need an endpoint to READ the data in my pets table
 //We can use SQL to query our database and get the data
 //Our database is not hosted locally, so we don't know how long the data takes to travel
-// app.get("/pets", async (req, res) => {
-//   const query = await db.query(`SELECT * FROM pets`);
-//   //we can wrangle the query response to get the rows property only.
-//   res.json(query.rows);
-//   console.log(query);
-// });
+app.get("/reviews", async (req, res) => {
+  const query = await db.query(`SELECT * FROM reviews`);
+  //we can wrangle the query response to get the rows property only.
+  res.json(query.rows);
+  console.log(query);
+});
