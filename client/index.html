@@ -10,8 +10,56 @@
   </head>
   <body>
     <h1>Guestbook</h1>
-    <form></form>
+    <form>
+      <label for="guestName">Guest Name(s)</label>
+      <input
+        type="text"
+        name="guestName"
+        id="guestName"
+        required
+        placeholder="Please enter your name"
+      />
+      <p></p>
+      <label for="checkIn">Check In Date</label>
+      <input type="date" name="checkDate" id="check-in" />
+      <p></p>
+      <label for="checkOut">Check Out Date</label>
+      <input type="date" name="checkDate" id="check-out" />
+      <p></p>
+      <label for="travelledFrom">Travelled From</label>
+      <input
+        type="text"
+        name="travlledFrom"
+        id="travelled-from"
+        placeholder="Town, City or County"
+      />
+      <p></p>
+      <label for="messageToHost">Message to the Host</label>
+      <input type="text" name="messageToHost" id="message-to-host" />
+      <p></p>
+      <label for="favMoment">Favourite Moments/Special Highlights</label>
+      <input type="text" name="favMoment" id="favourite-moments" />
+      <p></p>
+      <label for="recommendations"
+        >Places I/We Recommend - Restaurants - Entertainment - Must See
+        Sights</label
+      >
+      <input type="text" name="recommendations" id="recommendations" />
+      <p></p>
+      <legend>Please rate your visit out of 5</legend>
+      <label for="1-star">1 star</label>
+      <input type="radio" id="1-star" name="1-Star" value="1-star" />
+      <label for="2-star">2 stars</label>
+      <input type="radio" id="2-star" name="2-star" value="2-star" />
+      <label for="3-star">3 stars</label>
+      <input type="radio" id="3-star" name="3-star" value="3-star" />
+      <label for="4-star">4 stars</label>
+      <input type="radio" id="4-star" name="4-star" value="4-star" />
+      <label for="2-star">5 stars</label>
+      <input type="radio" id="5-star" name="5-star" value="5-star" />
+      <p></p>
+      <button type="submit">Submit</button>
+    </form>
     <div id="display-user-feedback-container"></div>
-    <!-- remember the name attribute -->
   </body>
 </html>
