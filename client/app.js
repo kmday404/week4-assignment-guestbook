@@ -12,37 +12,36 @@ async function handleSubmit(event) {
   //here we are collecting our object template (formData) and parsing it into the syntax of a classic object
   const formValues = Object.fromEntries(formData);
   console.table(formValues);
-try {
-  const res = await fetch(
-    "http://localhost:8080/reviews",
-    //these are part of the object being sent to my endpoint
-    {
-      method: POST,
-      //header = object -- property is content type: property is what the value is
-      headers: { "Content-type": "application/json" },
-      //what format is this in
-      body: JSON.stringify(formValues),
+  try {
+    const res = await fetch(
+      "http://localhost:8080/reviews",
+      //these are part of the object being sent to my endpoint
+      {
+        method: POST,
+        //header = object -- property is content type: property is what the value is
+        headers: { "Content-type": "application/json" },
+        //what format is this in
+        body: JSON.stringify(formValues),
+      }
+    );
+    if (!res.ok) {
+      throw new Error("Network response failed!");
     }
-  );
-  if (!res.ok){
-    throw new Error("Network response failed!")
+  } catch (error) {
+    console.error("problem with fetch", error);
   }
-}
-catch (error) {
-console.error("problem with fetch", error);
 }
 form.addEventListener("submit", handleSubmit);
 
 renderReviews();
-function renderReviews(){
-//set my res to be a fetch 
-//I want to fetch the data from my server endpoint (get data)
-//set a variable for review data to be = the res (but make it json)
-//call the function that makes it json
-//select the container -- then create the feedbackContainer.forEach((review))
-//review.guestName
-//what am I going to call each thing 
-
+function renderReviews() {
+  //set my res to be a fetch
+  //I want to fetch the data from my server endpoint (get data)
+  //set a variable for review data to be = the res (but make it json)
+  //call the function that makes it json
+  //select the container -- then create the feedbackContainer.forEach((review))
+  //review.guestName
+  //what am I going to call each thing
 }
 
 // function createReviews() {
