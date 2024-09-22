@@ -37,3 +37,6 @@ screenshot of deployment -- however I have not updated my URLs because it is not
   ![screenshot of test data](./screenshots/supabase%20test%20data%20part1.png)
   ![screenshot of test data continued](./screenshots/supabase%20test%20data%20part2.png)
   ![screenshot of test data displaying on the page/browser](./screenshots/supabase%20test%20data%20part3.png)
+
+  Trello was also helpful:
+  ![screenshot of trello board](./screenshots/trello.png)
