@@ -17,13 +17,21 @@ screenshot of deployment -- however I have not updated my URLs because it is not
 ## Requirements
 
 - Ensure your HTML form is working and submitting data into the database as expected.
+
   I thought I had done, I am unusre f this is where my error come from.
+
 - Confirm that your project is functional on multiple screen sizes using either media queries or dynamic CSS styling.
+
   Done
+
 - Create a working GET API route in your server.
+
   I thought I had done, I am unusre f this is where my error come from.
+
 - Create a working POST API route in your server and fetch it from your client.
+
   I thought I had done, I am unusre f this is where my error come from.
+
 - Seed your database with realistic-looking ‘dummy’ data through the Supabase query editor or a seed file in your server. Ensure that this is saved and submitted (in a screenshot or seed file form) so it can be marked and tested efficiently.  
   Done:
   ![screenshot of test data](./screenshots/supabase%20test%20data%20part1.png)
