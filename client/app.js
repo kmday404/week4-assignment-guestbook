@@ -15,7 +15,7 @@ async function handleSubmit(event) {
   console.table(formValues);
   try {
     const res = await fetch(
-      "http://localhost:8080/reviews",
+      "http://localhost:8080/post-reviews",
       //these are part of the object being sent to my endpoint
       {
         method: "POST",
@@ -31,6 +31,7 @@ async function handleSubmit(event) {
   } catch (error) {
     console.error("problem with fetch", error);
   }
+  renderReviews();
 }
 form.addEventListener("submit", handleSubmit);
 
@@ -85,7 +86,6 @@ async function renderReviews() {
 //review.guestName
 //what am I going to call each thing
 
-renderReviews();
 // Call renderReviews when the page loads
 window.onload = function () {
   renderReviews();
